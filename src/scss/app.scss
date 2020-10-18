@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import './components/header';
+@import './components/sidebar';
+
+@import './pages/mainPage';
 
 button, input {
     border: none;
@@ -17,4 +20,8 @@ button, input {
 
 body {
     background-color: #0e0e1a;
+
+    .App__main {
+        display: flex;
+    }
 }

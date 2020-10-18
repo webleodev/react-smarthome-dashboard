@@ -3,6 +3,7 @@ import React from 'react';
 import userImage from '../assets/images/userPhotos/userPhoto5.png';
 import settingsIcon from '../assets/svg/settings.svg';
 import notificationsIcon from '../assets/svg/notifications.svg';
+import searchIcon from '../assets/svg/search.svg';
 
 function Header() {
     const [visibleNotifications, setVisibleNotifications] = React.useState(false);
@@ -11,7 +12,6 @@ function Header() {
     const notificationIconRef = React.useRef();
     const notificationBlockRef = React.useRef();
     const userPhotoRef = React.useRef();
-    const userBlockRef = React.useRef();
 
     const toggleVisibleNotifications = () => {
         setVisibleNotifications(!visibleNotifications);
@@ -34,15 +34,15 @@ function Header() {
         <header>
             <div className="header__wrapper">
                 <h1 className="header__logo" id="header__logo">
-                    <span className="normal">Smart</span>
-                    <span className="bold">Home</span>
+                    <span className="normal">S</span>
+                    <span className="bold">H</span>
                 </h1>
 
                 <div className="search__block">
                     <input className="search__input" type="search" name="search" id="search__input" placeholder="Search" autoComplete="off" />
 
                     <button className="search__button" id="search__button">
-
+                        <img src={searchIcon} alt="search icon"/>
                     </button>
                 </div>
 

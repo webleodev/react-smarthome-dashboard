@@ -1,19 +1,21 @@
 header {
     width: 100%;
 
-    background-color: #131220;
+    background-color: #0e0e1a;
+
+    margin-bottom: 1vw;
 
     .header__wrapper {
         display: flex;
         align-items: center;
 
-        width: 95vw;
+        width: 94vw;
         height: 4vw;
 
         margin: 0 auto;
 
         h1 {
-            margin-right: 2.5vw;
+            margin-right: 3vw;
 
             span {
                 color: white;
@@ -23,7 +25,7 @@ header {
                 }
 
                 &.bold {
-                    font-weight: 600;
+                    font-weight: 700;
                 }
             }
         }
@@ -33,24 +35,40 @@ header {
             display: flex;
             align-items: center;
 
-            width: 40%;
+            width: 62vw;
 
-            margin-right: auto;
+            margin: 0 auto 0 3vw;
+
+            border-radius: .5vw;
+
+            box-shadow: 0px 0px 4px 2px #1d1b3c;
 
             .search__input {
                 width: 100%;
 
-                padding: .4vw;
+                padding: .5vw;
 
                 font-size: 1vw;
                 color: white;
 
-                background-color: #0e0e1a;
-
-                border-radius: .5vw;
+                background-color: #131220;
             }
 
-            .search__button {}
+            .search__button {
+                width: 2vw;
+                height: 2.2vw;
+
+                margin-right: .5vw;
+
+                background-color: #131220;
+
+                cursor: pointer;
+
+                img {
+                    width: 1.5vw;
+                    height: 1.5vw;
+                }
+            }
         }
 
         .button {
@@ -59,7 +77,7 @@ header {
             width: 1.5vw;
             height: 1.5vw;
 
-            margin: 0 .5vw;
+            margin: 0 1vw;
 
             background-color: rgba($color: #000000, $alpha: 0);
 
@@ -77,6 +95,8 @@ header {
                 width: 15vw;
 
                 text-align: left;
+
+                border-radius: 1vw;
 
                 background-color: #131220;
                 box-shadow: 0px 0px 6px 3px #1d1b3c;
@@ -106,7 +126,7 @@ header {
 
             max-width: 20vw;
 
-            margin-left: .5vw;
+            margin-left: 1vw;
 
             white-space: nowrap;
 
@@ -150,6 +170,8 @@ header {
                 width: 15vw;
 
                 text-align: left;
+
+                border-radius: 1vw;
 
                 background-color: #131220;
                 box-shadow: 0px 0px 6px 3px #1d1b3c;

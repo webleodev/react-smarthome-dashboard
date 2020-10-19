@@ -1,0 +1,54 @@
+.__select {
+    position: relative;
+
+    width: 12vw;
+
+    padding: 1vw;
+
+    border-radius: .5vw;
+    box-shadow: 0px 0px 4px 2px #1d1b3c;
+
+    z-index: 1;
+
+    cursor: pointer;
+
+    &.active {
+        background-color: #282650;
+
+        border-radius: .5vw .5vw 0 0;
+    }
+
+    .__value {
+        font-size: 1vw;
+
+        color: white;
+    }
+
+    .__list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+        max-height: 10vw;
+
+        border-radius: 0 0 .5vw .5vw;
+
+        background-color: #282650;
+        box-shadow: 0px 0px 4px 2px #1d1b3c;
+
+        .__item {
+            width: 100%;
+
+            padding: 1vw;
+
+            list-style: none;
+
+            font-size: 1vw;
+
+            color: white;
+
+            cursor: pointer;
+        }
+    }
+}

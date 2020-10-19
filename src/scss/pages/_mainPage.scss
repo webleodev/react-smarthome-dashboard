@@ -1,3 +1,8 @@
+@import '../components/switch';
+@import '../components/counter';
+@import '../components/select';
+@import '../components/deviceItem';
+
 .main__page {
     width: 62vw;
 
@@ -60,84 +65,67 @@
         }
     }
 
-    .indicators__block {
-        display: flex;
-        align-items: center;
-
+    .temperature__block {
         width: 100%;
+        padding: 2vw;
 
-        .information__block {
+        box-shadow: 0px 0px 4px 2px #1d1b3c;
+
+        border-radius: 1vw;
+
+        .temperature__header {
             display: flex;
             align-items: center;
 
-            .information__img {
-                width: 1.5vw;
-                height: 1.5vw;
-            }
+            margin-bottom: 2vw;
 
-            .information__value {
-                font-size: 1.25vw;
+            img {
+                width: 2vw;
+                height: 2vw;
 
-                color: white;
-            }
-
-            &#temperature {
-                margin-left: 1vw;
-            }
-        }
-
-        .place__select {
-            position: relative;
-
-            width: 12vw;
-
-            margin-left: auto;
-            padding: 1vw;
-
-            border-radius: .5vw;
-            box-shadow: 0px 0px 4px 2px #1d1b3c;
-
-            cursor: pointer;
-
-            &.active {
-                background-color: #282650;
-
-                border-radius: .5vw .5vw 0 0;
+                margin-right: .5vw;
             }
 
             .place__value {
-                font-size: 1vw;
-
+                font-size: 1.25vw;
                 color: white;
+
+                margin-right: auto;
             }
+        }
 
-            .place__list {
-                position: absolute;
-                top: 100%;
-                left: 0;
+        .temperature__body {
+            .room {
+                position: relative;
 
-                width: 100%;
-                max-height: 10vw;
+                width: 50vw;
+                height: 15vw;
 
-                border-radius: 0 0 .5vw .5vw;
+                margin: 0 auto 2vw auto;
 
-                background-color: #282650;
-                box-shadow: 0px 0px 4px 2px #1d1b3c;
+                box-shadow: 0px 0px 4px 2px #b8150a;
 
-                .place__item {
-                    width: 100%;
+                overflow: hidden;
 
-                    padding: 1vw;
+                border-radius: 1vw;
 
-                    list-style: none;
+                .temperature__background {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
 
-                    font-size: 1vw;
+                    border-radius: 1vw;
 
-                    color: white;
-
-                    cursor: pointer;
+                    background-color: #b8150a;
+                    opacity: .5;
                 }
             }
+        }
+
+        .devices__block {
+            display: flex;
         }
     }
 }

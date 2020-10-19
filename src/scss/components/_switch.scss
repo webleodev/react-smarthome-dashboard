@@ -1,0 +1,51 @@
+h1.switch__value {
+    font-size: 1vw;
+
+    text-transform: uppercase;
+
+    color: white;
+}
+
+.switch {
+    position: relative;
+    
+    width: 2vw;
+    height: 1vw;
+
+    margin-left: 1vw;
+
+    background-color: white;
+
+    border-radius: 10vw;
+
+    transition: background-color .15s ease-in-out;
+
+    cursor: pointer;
+
+    .dot {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+
+        width: .9vw;
+        height: .9vw;
+
+        background-color: #282650;
+
+        border-radius: 50%;
+
+        transform: translateY(-50%);
+
+        transition: left .15s ease-in-out;
+    }
+
+    &.switched {
+        background-color: #0e0e1a;
+
+        .dot {
+            left: 45%;
+            
+            background-color: white;
+        }
+    }
+}

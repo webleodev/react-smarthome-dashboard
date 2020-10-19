@@ -1,0 +1,42 @@
+.counter {
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+
+    user-select: none;
+
+    .change__value {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 3vw;
+        height: 3vw;
+        line-height: 3vw;
+
+        font-size: 1.5vw;
+        font-weight: 600;
+        color: white;
+
+        border-radius: 1vw;
+        box-shadow: 0px 0px 4px 2px #1d1b3c;
+
+        transition: background-color .15s ease-in-out,
+                    box-shadow .15s ease-in-out;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: #0180f6;
+            box-shadow: 0px 0px 4px 2px #0180f6;
+        }
+    }
+
+    .__value {
+        margin: 0 1vw;
+
+        font-size: 1.25vw;
+        color: white;
+    }
+}

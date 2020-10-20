@@ -46,9 +46,7 @@ function MainPage() {
 
             <div className="temperature__block">
                 <div className="temperature__header">
-                    <img src={termometerIcon} alt="termometer icon" className="termometer__icon" />
-
-                    <div className={`__select ${visiblePlaceList === true ? 'active' : ''}`} id="place__select" onClick={toggleVisible}>
+                    <div className={`__select medium ${visiblePlaceList === true ? 'active' : ''}`} id="place__select" onClick={toggleVisible}>
                         <span className="__value" id="place__value">
                             Bedroom
                         </span>
@@ -62,44 +60,54 @@ function MainPage() {
                         )}
                     </div>
 
-                    <div className="counter" id="temperature__counter">
-                        <span className="change__value" id="decrement__value">
+                    <div className="__counter" id="temperature__counter">
+                        <img src={termometerIcon} alt="termometer icon" className="__icon" />
+
+                        <button className="__button _primary _left" id="decrement__value">
                             -
-                        </span>
+                        </button>
 
                         <span className="__value" id="temperature__value">
                             +20&#8451;
                         </span>
 
-                        <span className="change__value" id="increment__value">
+                        <button className="__button _primary _right" id="increment__value">
                             +
+                        </button>
+                    </div>
+
+                    <div className="__counter" id="humidity__counter">
+                        <img src={aDropIcon} alt="a drop icon" className="__icon" />
+
+                        <span className="__value" id="humidity__value">
+                            35%
                         </span>
+
+                        <button className="__button _secondary _right" id="humidity-add__value">
+                            add
+                        </button>
                     </div>
                 </div>
 
-                <div className="temperature__body">
-                    <div className="room" id="room--bedroom">
-                        <div className="temperature__background"></div>
-                    </div>
-                </div>
+                <div className="devices">
+                    <div className="devices__body inline">
+                        <div className={`device__item ${checkedCheckbox === true ? 'switched' : ''}`}>
+                            <div className="device__top">
+                                <h1 className="switch__value">{`${checkedCheckbox === true ? 'on' : 'off'}`}</h1>
 
-                <div className="devices__block">
-                    <div className={`device__item ${checkedCheckbox === true ? 'switched' : ''}`}>
-                        <div className="device__top">
-                            <h1 className="switch__value">{`${checkedCheckbox === true ? 'on' : 'off'}`}</h1>
+                                <input className="switch__checkbox" type="checkbox" name="switch__checkbox" id="checkbox-refridgerator" onChange={toggleCheckbox} />
 
-                            <input className="switch__checkbox" type="checkbox" name="switch__checkbox" id="checkbox-refridgerator" onChange={toggleCheckbox} />
+                                <label htmlFor="checkbox-refridgerator">
+                                    <div className={`switch ${checkedCheckbox === true ? 'switched' : ''}`}>
+                                        <div className="dot"></div>
+                                    </div>
+                                </label>
+                            </div>
 
-                            <label htmlFor="checkbox-refridgerator">
-                                <div className={`switch ${checkedCheckbox === true ? 'switched' : ''}`}>
-                                    <div className="dot"></div>
-                                </div>
-                            </label>
+                            <img src={refridgeratorIcon} alt="refrigerator icon" className="device__icon" />
+
+                            <div className="device__name">Refridgerator</div>
                         </div>
-
-                        <img src={refridgeratorIcon} alt="refrigerator icon" className="device__icon" />
-
-                        <div className="device__name">Refridgerator</div>
                     </div>
                 </div>
             </div>

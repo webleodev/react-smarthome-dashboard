@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 
 import {Header, LeftSidebar} from './components';
+import RightSidebar from './components/RightSidebar';
 import {MainPage} from './pages';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <div className="App__main">
         <LeftSidebar />
         <Route path="/main" component={MainPage} exact />
+        <RightSidebar />
       </div>
     </div>
   );

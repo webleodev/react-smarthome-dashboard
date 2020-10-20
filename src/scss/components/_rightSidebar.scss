@@ -1,0 +1,17 @@
+@import '../components/_devicesComponents/devices';
+@import '../components/select';
+@import '../components/_button';
+
+.right__sidebar {
+    width: 27vw;
+    height: fit-content;
+
+    padding: 2vw;
+
+    border-radius: 1vw 0 0 1vw;
+    background-color: #10101c;
+
+    .sidebar__wrapper {
+        width: 100%;
+    }
+}

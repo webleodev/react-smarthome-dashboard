@@ -1,8 +1,6 @@
-.counter {
+.__counter {
     display: flex;
     align-items: center;
-
-    margin-left: auto;
 
     user-select: none;
 
@@ -34,8 +32,6 @@
     }
 
     .__value {
-        margin: 0 1vw;
-
         font-size: 1.25vw;
         color: white;
     }

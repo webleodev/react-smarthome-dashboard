@@ -1,9 +1,8 @@
 .__select {
     position: relative;
 
-    width: 12vw;
-
     padding: 1vw;
+    margin-right: auto;
 
     border-radius: .5vw;
     box-shadow: 0px 0px 4px 2px #1d1b3c;
@@ -12,10 +11,38 @@
 
     cursor: pointer;
 
-    &.active {
-        background-color: #282650;
+    &.small {
+        width: 6vw;
 
+        text-align: center;
+    }
+
+    &.medium {
+        width: 12vw;
+    }
+
+    &.toleft {
+        margin-right: auto;
+    }
+
+    &.toright {
+        margin-left: auto;
+    }
+
+    &.upcase {
+        .__value {
+            text-transform: uppercase;
+        }
+
+        .__list .__item {
+            text-transform: uppercase;
+        }
+    }
+
+    &.active {
         border-radius: .5vw .5vw 0 0;
+        
+        background-color: #282650;
     }
 
     .__value {

@@ -1,0 +1,33 @@
+@import './deviceItem';
+
+.devices {
+    width: 100%;
+
+    .devices__header {
+        display: flex;
+        align-items: center;
+
+        .devices__title {
+            margin-right: auto;
+
+            font-size: 1.25vw;
+            color: white;
+        }
+    }
+
+    .devices__body {
+        &.inline {
+            display: -webkit-inline-box;
+
+            width: 100%;
+
+            padding: 1vw 1vw 1vw 0;
+
+            overflow: hidden;
+        }
+
+        &.block {
+            display: block;
+        }
+    }
+}

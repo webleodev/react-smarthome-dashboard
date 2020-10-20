@@ -10,7 +10,7 @@ import SecurityIcon from '../assets/svg/security.svg';
 
 function LeftSidebar() {
     return (
-        <section className="sidebar">
+        <section className="left__sidebar">
             <ul className="menu__sidebar" id="menu__sidebar">
                 <Link to="/main">
                     <li className="sidebar__item active" id="display__item">

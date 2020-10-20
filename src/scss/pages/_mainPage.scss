@@ -1,12 +1,13 @@
 @import '../components/switch';
 @import '../components/counter';
 @import '../components/select';
-@import '../components/deviceItem';
+@import '../components/_devicesComponents/_devices';
+@import '../components/_button';
 
 .main__page {
     width: 62vw;
 
-    margin-left: 4vw;
+    margin: 0 2vw;
 
     .welcome__block {
         display: flex;
@@ -18,7 +19,7 @@
         padding: 2vw;
         padding-bottom: 0;
 
-        border-radius: .5vw;
+        border-radius: 1vw;
         box-shadow: 0px 0px 4px 2px #1d1b3c;
 
         .welcome__wrapper {
@@ -67,7 +68,7 @@
 
     .temperature__block {
         width: 100%;
-        padding: 2vw;
+        padding: 1vw 2vw 1vw 1vw;
 
         box-shadow: 0px 0px 4px 2px #1d1b3c;
 
@@ -77,13 +78,13 @@
             display: flex;
             align-items: center;
 
-            margin-bottom: 2vw;
+            padding: 1vw 0 1vw 1vw;
 
-            img {
+            .__icon {
                 width: 2vw;
                 height: 2vw;
 
-                margin-right: .5vw;
+                margin: 0 1vw;
             }
 
             .place__value {
@@ -92,40 +93,6 @@
 
                 margin-right: auto;
             }
-        }
-
-        .temperature__body {
-            .room {
-                position: relative;
-
-                width: 50vw;
-                height: 15vw;
-
-                margin: 0 auto 2vw auto;
-
-                box-shadow: 0px 0px 4px 2px #b8150a;
-
-                overflow: hidden;
-
-                border-radius: 1vw;
-
-                .temperature__background {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-
-                    border-radius: 1vw;
-
-                    background-color: #b8150a;
-                    opacity: .5;
-                }
-            }
-        }
-
-        .devices__block {
-            display: flex;
         }
     }
 }

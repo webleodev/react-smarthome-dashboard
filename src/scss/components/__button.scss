@@ -1,0 +1,52 @@
+.__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1vw;
+    background-color: transparent;
+    box-shadow: 0px 0px 4px 2px #1d1b3c;
+
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1vw;
+    color: white;
+
+    cursor: pointer;
+
+    transition: background-color .15s ease-in-out,
+                box-shadow .15s ease-in-out;
+
+    &:hover {
+        background-color: #0180f6;
+        box-shadow: 0px 0px 4px 2px #0180f6;
+    }
+
+    &._primary {
+        width: 3vw;
+        height: 3vw;
+
+        padding: 0;
+    }
+
+    &._secondary {
+        height: 3vw;
+
+        padding: 0 1vw;
+    }
+
+    &._left {
+        margin-right: 1vw;
+    }
+
+    &._right {
+        margin-left: 1vw;
+    }
+
+    img.__icon {
+        width: 2vw;
+        height: 2vw;
+
+        transform: rotate(90deg);
+    }
+}

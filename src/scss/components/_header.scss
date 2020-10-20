@@ -101,6 +101,8 @@ header {
                 background-color: #131220;
                 box-shadow: 0px 0px 6px 3px #1d1b3c;
 
+                z-index: 2;
+
                 .notifications__list {
                     width: 100%;
 
@@ -129,6 +131,8 @@ header {
             margin-left: 1vw;
 
             white-space: nowrap;
+
+            z-index: 2;
 
             cursor: pointer;
 

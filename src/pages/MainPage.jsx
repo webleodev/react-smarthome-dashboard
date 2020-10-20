@@ -5,18 +5,14 @@ import weatherIcon from '../assets/svg/weather.svg';
 import termometerIcon from '../assets/svg/termometer.svg';
 import aDropIcon from '../assets/svg/adrop.svg';
 import refridgeratorIcon from '../assets/svg/refrigerator.svg';
+import { DeviceItem } from '../components';
 
 function MainPage() {
     const [visiblePlaceList, setVisiblePlaceList] = React.useState(false);
-    const [checkedCheckbox, setCheckedCheckbox] = React.useState(false);
-
+    
     const toggleVisible = () => {
         setVisiblePlaceList(!visiblePlaceList);
-    }
-
-    const toggleCheckbox = () => {
-        setCheckedCheckbox(!checkedCheckbox);
-    }
+    };
 
     return (
         <section className="main__page">
@@ -46,7 +42,7 @@ function MainPage() {
 
             <div className="temperature__block">
                 <div className="temperature__header">
-                    <div className={`__select medium ${visiblePlaceList === true ? 'active' : ''}`} id="place__select" onClick={toggleVisible}>
+                    <div className={`__select medium toleft ${visiblePlaceList === true ? 'active' : ''}`} id="place__select" onClick={toggleVisible}>
                         <span className="__value" id="place__value">
                             Bedroom
                         </span>
@@ -91,23 +87,10 @@ function MainPage() {
 
                 <div className="devices">
                     <div className="devices__body inline">
-                        <div className={`device__item ${checkedCheckbox === true ? 'switched' : ''}`}>
-                            <div className="device__top">
-                                <h1 className="switch__value">{`${checkedCheckbox === true ? 'on' : 'off'}`}</h1>
-
-                                <input className="switch__checkbox" type="checkbox" name="switch__checkbox" id="checkbox-refridgerator" onChange={toggleCheckbox} />
-
-                                <label htmlFor="checkbox-refridgerator">
-                                    <div className={`switch ${checkedCheckbox === true ? 'switched' : ''}`}>
-                                        <div className="dot"></div>
-                                    </div>
-                                </label>
-                            </div>
-
-                            <img src={refridgeratorIcon} alt="refrigerator icon" className="device__icon" />
-
-                            <div className="device__name">Refridgerator</div>
-                        </div>
+                        <DeviceItem icon={refridgeratorIcon} id={1} />
+                        <DeviceItem icon={refridgeratorIcon} id={2} />
+                        <DeviceItem icon={refridgeratorIcon} id={3} />
+                        <DeviceItem icon={refridgeratorIcon} id={4} />
                     </div>
                 </div>
             </div>

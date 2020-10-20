@@ -2,7 +2,6 @@
     width: 12vw;
 
     padding: 1vw;
-    margin: 0 1vw;
 
     border-radius: 1vw;
 
@@ -13,6 +12,10 @@
 
     &:hover {
         background-color: #1d1b3c;
+    }
+
+    &.list {
+        margin: 0 1vw;
     }
 
     &.switched {

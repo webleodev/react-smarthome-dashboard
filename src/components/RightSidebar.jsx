@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import _rightSidebarMain from './_rightSidebarMain';
+import RightSidebarMain from './RightSidebarMain';
 
 function RightSidebar() {
     return (
-        <Route path="/main" component={_rightSidebarMain} exact />
+        <Route path="/main" component={RightSidebarMain} exact />
     );
 };
 

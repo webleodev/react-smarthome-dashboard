@@ -1,0 +1,14 @@
+export {default as aDropIcon} from './adrop.svg';
+export {default as displayIcon} from './display.svg';
+export {default as goToIcon} from './goto.svg';
+export {default as lampIcon} from './lamp.svg';
+export {default as logoutIcon} from './logout.svg';
+export {default as membersIcon} from './members.svg';
+export {default as notificationsIcon} from './notifications.svg';
+export {default as locationIcon} from './placeholder.svg';
+export {default as refrigeratorIcon} from './refrigerator.svg';
+export {default as searchIcon} from './search.svg';
+export {default as securityIcon} from './security.svg';
+export {default as settingsIcon} from './settings.svg';
+export {default as termometerIcon} from './termometer.svg';
+export {default as weatherIcon} from './weather.svg';

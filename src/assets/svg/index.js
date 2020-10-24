@@ -12,3 +12,5 @@ export {default as securityIcon} from './security.svg';
 export {default as settingsIcon} from './settings.svg';
 export {default as termometerIcon} from './termometer.svg';
 export {default as weatherIcon} from './weather.svg';
+export {default as wifiIcon} from './wifi.svg';
+export {default as stereoSystemIcon} from './stereosystem.svg';

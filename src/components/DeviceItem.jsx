@@ -1,11 +1,11 @@
 import React from 'react';
 
-function DeviceItem({icon, id}) {
-    const [checkedCheckbox, setCheckedCheckbox] = React.useState(false);
+function DeviceItem({state, icon, id, name}) {
+    const [checkedCheckbox, setCheckedCheckbox] = React.useState(state);
 
     const toggleCheckbox = () => {
         setCheckedCheckbox(!checkedCheckbox);
-    }
+    };
 
     return (
         <div className={`device__item list ${checkedCheckbox === true ? 'switched' : ''}`}>
@@ -23,7 +23,7 @@ function DeviceItem({icon, id}) {
 
             <img src={icon} alt="refrigerator icon" className="device__icon" />
 
-            <div className="device__name">Refridgerator</div>
+            <div className="device__name">{name}</div>
         </div>
     );
 };

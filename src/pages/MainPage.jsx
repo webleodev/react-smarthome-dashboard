@@ -1,19 +1,10 @@
 import React from 'react';
 
 import welcomeImage from '../assets/images/welcome.png';
-import weatherIcon from '../assets/svg/weather.svg';
-import termometerIcon from '../assets/svg/termometer.svg';
-import aDropIcon from '../assets/svg/adrop.svg';
-import refridgeratorIcon from '../assets/svg/refrigerator.svg';
-import { DeviceItem } from '../components';
+import { weatherIcon, termometerIcon, aDropIcon, refrigeratorIcon, wifiIcon } from '../assets/svg';
+import { DeviceItem, Select } from '../components';
 
 function MainPage() {
-    const [visiblePlaceList, setVisiblePlaceList] = React.useState(false);
-    
-    const toggleVisible = () => {
-        setVisiblePlaceList(!visiblePlaceList);
-    };
-
     return (
         <section className="main__page">
             <div className="welcome__block">
@@ -42,19 +33,7 @@ function MainPage() {
 
             <div className="temperature__block">
                 <div className="temperature__header">
-                    <div className={`__select medium toleft ${visiblePlaceList === true ? 'active' : ''}`} id="place__select" onClick={toggleVisible}>
-                        <span className="__value" id="place__value">
-                            Bedroom
-                        </span>
-
-                        {visiblePlaceList && (
-                            <ul className="__list" id="place__list">
-                                <li className="__item">Living Room</li>
-                                <li className="__item">Kitchen</li>
-                                <li className="__item">Bedroom</li>
-                            </ul>
-                        )}
-                    </div>
+                    <Select classes={'medium toleft'} list={['Bedroom', 'Living room', 'Kitchen']} />
 
                     <div className="__counter" id="temperature__counter">
                         <img src={termometerIcon} alt="termometer icon" className="__icon" />
@@ -87,10 +66,10 @@ function MainPage() {
 
                 <div className="devices">
                     <div className="devices__body inline">
-                        <DeviceItem icon={refridgeratorIcon} id={1} />
-                        <DeviceItem icon={refridgeratorIcon} id={2} />
-                        <DeviceItem icon={refridgeratorIcon} id={3} />
-                        <DeviceItem icon={refridgeratorIcon} id={4} />
+                        <DeviceItem state={false} icon={refrigeratorIcon} id={1} name={`Refrigerator`} />
+                        <DeviceItem state={true} icon={wifiIcon} id={2} name={`Wi-fi`} />
+                        <DeviceItem state={true} icon={refrigeratorIcon} id={3} name={`Refrigerator`} />
+                        <DeviceItem state={false} icon={refrigeratorIcon} id={4} name={`Refrigerator`} />
                     </div>
                 </div>
             </div>

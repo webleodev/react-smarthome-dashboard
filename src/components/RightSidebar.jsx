@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import RightSidebarMain from './RightSidebarMain';
+import { RightSidebarMain } from './RightSidebarsComps';
 
 function RightSidebar() {
     return (
